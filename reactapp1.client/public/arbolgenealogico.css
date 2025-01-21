@@ -1,0 +1,16 @@
+﻿/* Estilos para el árbol genealógico */
+.tree {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.node {
+    cursor: pointer; /* Cambia el cursor al pasar sobre los nodos */
+}
+
+.fallecido-image {
+    width: 40px; /* Ajusta el tamaño de la imagen */
+    height: 40px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 2px solid gray; /* Bordes alrededor de la imagen */
+}

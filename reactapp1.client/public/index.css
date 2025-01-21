@@ -1,0 +1,288 @@
+﻿:root {
+    /* Paleta azulada */
+    --background-color: #FFFFFF;
+    --primary-color: #BBDEFB;
+    --secondary-color: #64B5F6;
+    --emphasis-color: #1565C0;
+    --primary-text-color: #000000;
+    --secondary-text-color: #757575;
+    /* Paleta rosada */
+    --pink-primary-color: #FFCDD2;
+    --pink-secondary-color: #F399A2;
+    --pink-emphasis-color: #A70314;
+    /* Paleta Morada */
+    --purple-primary-color: #E1BEE7;
+    --purple-secondary-color: #BA68C8;
+    --purple-emphasis-color: #6A1B9A;
+}
+
+.abril-fatface {
+    font-family: "Abril Fatface", serif;
+}
+
+* {
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.btn.secundario {
+    display: inline-flex;
+}
+
+.secundario {
+    background-color: var(--secondary-color);
+}
+.primario {
+    background-color: var(--primary-color);
+}
+
+.secundario:hover {
+    outline: 3px solid var(--emphasis-color);
+   
+}
+.c-secundario {
+    color: var(--secondary-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index:2;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    color: var(--secondary-text-color) !important;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: var(--secondary-text-color);
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+}
+
+.logout-button, .settings-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+    .dropdown-item:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+.center-title {
+    text-align: center;
+    margin: 50px 0;
+}
+input.form-control::placeholder {
+    color: rgba(255,255,255,.5);
+    opacity: 1; /* Firefox */
+}
+
+.plans-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.plan {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+}
+
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+    .feature i {
+        font-size: 2rem;
+        margin-right: 15px;
+    }
+
+.faq-section {
+    margin-bottom: 50px;
+}
+
+.custom-alert {
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .mobile-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Contenedor de la imagen de perfil */
+.profile-pic-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+    .profile-pic-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.seccion-1 {
+    background-color: var(--primary-color);
+    text-align: left;
+    height: 150px; /* Sección más alta para que sea visible hasta la mitad */
+    z-index: 1;
+    display: flex;
+    padding-top: 40px;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
+    position: relative;
+    padding-bottom: 5px;
+    margin-left: 10px; /* Alineación izquierda */
+    display: inline-block;
+}
+    .section-title::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: clamp(70%,100%,150%); /* Ajusta este valor para extender el subrayado */
+        height: 4px;
+        background-color: var(--primary-color); /* Color del subrayado */
+    }
+
+/* Segunda sección: posicionada sobre la primera */
+.card-wrapper {
+    position: absolute; /* La hacemos absoluta para solaparla */
+    top: -60px; /* Ajustamos la posición para que esté sobre la sección rosa */
+    z-index: 2; /* Aseguramos que esté encima de la primera */
+    width: 100%; /* Abarca el ancho completo, pero se controla con la segunda */
+    display: flex;
+    justify-content: center; /* Centrar la segunda sección */
+}
+
+.card-section {
+    border-radius: 8px;
+    padding: 20px 20px 0px 20px;
+    width: 90%; /* Ancho del 80% de la pantalla */
+    background-color: #fff;
+    z-index: 3; /* Aseguramos que esté bien posicionada sobre la primera */
+}
+
+/* Ícono grande solo para 'account_circle' */
+.material-symbols-outlined.fa-6x {
+    font-size: 6rem; /* El ícono de perfil es grande */
+    padding: 0px 20px 0px 20px;
+    color: #555;
+}
+
+.material-symbols-outlined {
+    font-size: 1.3rem; /* Otros íconos más pequeños */
+}
+
+/* Alinear textos verticalmente en la misma columna */
+.card-title,
+p {
+    margin: 0;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Espaciado entre nombre y correo */
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+/* Ubicación del 'usuario desde xxx' */
+.user-since {
+    font-size: 0.85rem;
+    color: #666;
+    align-self: flex-start;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.7); z-index: -1;
+}
+
